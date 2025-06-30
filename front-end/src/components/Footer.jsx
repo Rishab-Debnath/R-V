@@ -14,7 +14,7 @@ function Footer() {
             <p>
               At R&V, we bring your ideas to life with clean code,<br />
               sleek design, and scalable web solutions.<br />
-              Rishab & Vedant — turning passion into projects.
+              Rishab & ggggg — turning passion into projects.
             </p>
           </div>
 
