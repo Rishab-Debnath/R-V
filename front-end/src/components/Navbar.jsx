@@ -50,27 +50,25 @@ function Navbar() {
           className={`navbar-menu hidden md:flex gap-8 lg:gap-12 xl:gap-16 text-white text-base font-medium absolute left-1/2 transform -translate-x-1/2 transition-all duration-500`}
         >
           <li>
-            <Link to="/about"
+            <Link to="/Home"
+              className="relative group px-6 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
+            >
+              <span className="relative z-10">Home</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/About"
               className="relative group px-6 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
             >
               <span className="relative z-10">Who we are</span>
             </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link to="/services"
               className="relative group px-6 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
             >
               <span className="relative z-10">Services</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="relative group px-6 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
-            >
-              <span className="relative z-10">Projects</span>
-            </a>
+            </Link>
           </li>
           <li>
             <Link

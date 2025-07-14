@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 import About from './pages/About';
+import Home from './pages/Home';
+import Services from './pages/services';
 
 
 function HomePage() {
@@ -23,6 +25,8 @@ function App() {
     <div className="min-h-screen bg-black flex flex-col">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
       </Routes>
