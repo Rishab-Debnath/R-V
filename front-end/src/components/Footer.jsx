@@ -15,7 +15,7 @@ function Footer() {
           <div className="text-sm text-gray-400 space-y-2">
             <p className="uppercase tracking-wide">About</p>
             <p>
-              At RV technovate, we transform your vision into reality through
+              At RV Technovate, we transform your vision into reality through
               clean code,
               <br />
               elegant design, and scalable digital solutions.
