@@ -205,8 +205,8 @@ export default function About() {
       {/* Enhanced Professional CSS with Animations */}
       <style jsx>{`
         .neon-text {
-          color: #ffffff !important;
-          text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #003ef7ff;
+          color: #ffffffff !important;
+          text-shadow: 0 0 2px #ffffffff, 0 0 4px #ffffffff, 0 0 6px #ffffffff;
         }
 
         /* Professional Color Palette */
@@ -763,29 +763,16 @@ export default function About() {
                     {/* Vedant Card - Enhanced Professional */}
                     <div className="group relative">
                       {/* Main card */}
-                      <div className="relative bg-transparent backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-white/30 transition-all duration-500 min-h-[480px] flex flex-col justify-center overflow-hidden">
+                      <div className="relative bg-transparent backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-white group-hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all duration-500 min-h-[480px] flex flex-col justify-center overflow-hidden">
                         {/* Subtle background pattern */}
                         <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
 
                         {/* Content */}
                         <div className="relative z-10 text-center h-full flex flex-col justify-between">
                           <div className="relative inline-block mb-6 mx-auto">
-                            {/* Image glow effect */}
-                            <div className="absolute -inset-2 bg-white/30 rounded-2xl blur opacity-0 group-hover:opacity-70 transition-all duration-700"></div>
-
-                            {/* Image border effect */}
-                            <div className="relative p-1 bg-white/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500">
-                              <img
-                                src="images/vdi.jpg"
-                                className="relative w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
-                                alt="Vedant Ingale"
-                              />
-                            </div>
-
-                            {/* Fallback image without border for non-hover state */}
                             <img
                               src="images/vdi.jpg"
-                              className="absolute inset-0 w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover opacity-100 group-hover:opacity-0 transition-all duration-500"
+                              className="w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover"
                               alt="Vedant Ingale"
                             />
                           </div>
@@ -794,26 +781,21 @@ export default function About() {
                             {/* Animated line */}
                             <div className="relative w-16 h-0.5 mx-auto overflow-hidden">
                               <div className="absolute inset-0 bg-white opacity-60"></div>
-                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 animate-pulse transition-all duration-700"></div>
                             </div>
 
-                            <span className="text-gray-300 text-xs font-light uppercase tracking-[0.25em] block group-hover:text-white transition-colors duration-300">
-                              Founder & CEO
+                            <span className="text-gray-300 text-xs font-light uppercase tracking-[0.25em] block">
+                              Co-Founder
                             </span>
 
-                            <h2 className="text-3xl md:text-4xl font-bold text-white group-hover:text-white group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-500">
+                            <h2 className="text-3xl md:text-4xl font-bold text-white transition-all duration-500" style={{textShadow: '0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6), 0 0 30px rgba(255,255,255,0.4)'}}>
                               Vedant Ingale
                             </h2>
 
-                            <h4 className="text-lg text-gray-200 font-medium group-hover:text-white transition-colors duration-300">
-                              Full Stack Developer
-                            </h4>
-
-                            <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto group-hover:text-gray-200 transition-colors duration-300">
-                              Vedant is a frontend-oriented developer skilled in
-                              React.js with practical experience deploying
-                              scalable platforms that drive user engagement and
-                              business growth.
+                            <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto">
+                              Vedant Ingale is a passionate full-stack web
+                              developer crafting sleek, user-friendly websites
+                              that bring ideas to life with precision
+                              and creativity.
                             </p>
                           </div>
                         </div>
@@ -823,29 +805,16 @@ export default function About() {
                     {/* Rishab Card - Enhanced Professional */}
                     <div className="group relative">
                       {/* Main card */}
-                      <div className="relative bg-transparent backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-white/30 transition-all duration-500 min-h-[480px] flex flex-col justify-center overflow-hidden">
+                      <div className="relative bg-transparent backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-white group-hover:shadow-[0_0_20px_rgba(255,255,255,0.5)] transition-all duration-500 min-h-[480px] flex flex-col justify-center overflow-hidden">
                         {/* Subtle background pattern */}
                         <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
 
                         {/* Content */}
                         <div className="relative z-10 text-center h-full flex flex-col justify-between">
                           <div className="relative inline-block mb-6 mx-auto">
-                            {/* Image glow effect */}
-                            <div className="absolute -inset-2 bg-white/30 rounded-2xl blur opacity-0 group-hover:opacity-70 transition-all duration-700"></div>
-
-                            {/* Image border effect */}
-                            <div className="relative p-1 bg-white/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500">
-                              <img
-                                src="images/psp.jpg"
-                                className="relative w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
-                                alt="Rishab Debnath"
-                              />
-                            </div>
-
-                            {/* Fallback image without border for non-hover state */}
                             <img
                               src="images/psp.jpg"
-                              className="absolute inset-0 w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover opacity-100 group-hover:opacity-0 transition-all duration-500"
+                              className="w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover"
                               alt="Rishab Debnath"
                             />
                           </div>
@@ -853,23 +822,18 @@ export default function About() {
                           <div className="space-y-4 flex-1 flex flex-col justify-center">
                             {/* Animated line */}
                             <div className="relative w-16 h-0.5 mx-auto overflow-hidden">
-                              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-60"></div>
-                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 animate-pulse transition-all duration-700"></div>
+                              <div className="absolute inset-0 bg-white opacity-60"></div>
                             </div>
 
-                            <span className="text-gray-300 text-xs font-light uppercase tracking-[0.25em] block group-hover:text-purple-300 transition-colors duration-300">
+                            <span className="text-gray-300 text-xs font-light uppercase tracking-[0.25em] block">
                               Co-Founder
                             </span>
 
-                            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white via-purple-100 to-white bg-clip-text text-transparent group-hover:from-purple-300 group-hover:via-white group-hover:to-purple-300 transition-all duration-500">
+                            <h2 className="text-3xl md:text-4xl font-bold text-white transition-all duration-500" style={{textShadow: '0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6), 0 0 30px rgba(255,255,255,0.4)'}}>
                               Rishab Debnath
                             </h2>
 
-                            <h4 className="text-lg text-gray-200 font-medium group-hover:text-purple-200 transition-colors duration-300">
-                              Technical Architect
-                            </h4>
-
-                            <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto group-hover:text-gray-200 transition-colors duration-300">
+                            <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto">
                               Rishab is a full-stack developer focused on
                               building clean, scalable digital solutions. He
                               blends smart design with technology to create
