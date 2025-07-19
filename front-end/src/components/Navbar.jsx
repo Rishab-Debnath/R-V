@@ -38,9 +38,9 @@ function Navbar() {
         <Link to="/Home" className="flex items-center z-50 group">
           <div className="relative">
             <img
-              src="/images/RV_Logo.png"
+              src="/images/Logo2.png"
               alt="R&V Logo"
-              className="h-20 w-auto filter drop-shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
+              className="h-16 w-auto filter drop-shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
             />
           </div>
         </Link>

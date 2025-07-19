@@ -7,7 +7,7 @@ function Footer() {
         {/* Left Section - Logo and About */}
         <div className="space-y-8">
           <img
-            src="/images/RV_Logo.png"
+            src="/images/Logo 1.png"
             alt="R&V Logo"
             className="h-30 w-auto"
           />
@@ -15,27 +15,34 @@ function Footer() {
           <div className="text-sm text-gray-400 space-y-2">
             <p className="uppercase tracking-wide">About</p>
             <p>
-              At RV, we transform your vision into reality through clean code,
+              At RV technovate, we transform your vision into reality through
+              clean code,
               <br />
               elegant design, and scalable digital solutions.
               <br />
-              Founded by Vedant &amp; Rishab — driven by passion, built on precision.
+              Founded by Vedant &amp; Rishab — driven by passion, built on
+              precision.
             </p>
           </div>
 
-          <div>
-            <p className="uppercase text-sm text-gray-400 mb-2">Socials</p>
-            <div className="flex flex-wrap gap-3">
-              {["Instagram", "LinkedIn", "X"].map((platform) => (
-                <button
-                  key={platform}
-                  className="text-white px-4 py-1 rounded hover:bg-white hover:text-black transition duration-300 text-sm"
-                >
-                  {platform}
-                </button>
-              ))}
-            </div>
-          </div>
+          {[
+            { name: "Instagram", url: "https://www.instagram.com/rvtechnovate/" },
+            {
+              name: "LinkedIn",
+              url: "https://www.linkedin.com/company/rv-technovate/",
+            },
+            { name: "X", url: "https://x.com/RVTechnovate" },
+          ].map(({ name, url }) => (
+            <a
+              key={name}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white px-4 py-1 rounded hover:bg-white hover:text-black transition duration-300 text-sm"
+            >
+              {name}
+            </a>
+          ))}
         </div>
 
         {/* Right Section - Navigation and Bottom Note */}

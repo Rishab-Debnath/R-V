@@ -51,7 +51,7 @@ const Home = () => {
                 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_10px_rgba(59,130,246,0.7)]"
               >
                 Build. Launch. Scale.{" "}
-                <span className="text-blue-400">With R&V.</span>
+                <span className="text-blue-400">With RV Technovate.</span>
               </motion.h1>
 
               <motion.p
