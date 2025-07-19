@@ -35,7 +35,7 @@ function Contact() {
   };
 
   return (
-    <div className="bg-black min-h-screen flex flex-col text-white relative">
+    <div className="bg-black min-h-screen flex flex-col text-white relative overflow-x-hidden">
       <div className="absolute inset-0">
         <img
           src="/images/Background2.jpg"

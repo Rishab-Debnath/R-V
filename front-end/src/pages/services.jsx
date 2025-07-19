@@ -40,7 +40,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navbar />
 
       {/* Hero Image Section */}

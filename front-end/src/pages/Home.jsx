@@ -28,7 +28,7 @@ const services = [
 const Home = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat"
+      className="min-h-screen bg-cover bg-center bg-no-repeat overflow-x-hidden"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="bg-black bg-opacity-80 min-h-screen flex flex-col justify-between">

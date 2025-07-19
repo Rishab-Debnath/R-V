@@ -193,7 +193,7 @@ export default function About() {
 
   return (
     <div
-      className="bg-black text-white h-screen overflow-y-scroll"
+      className="bg-black text-white h-screen overflow-y-scroll overflow-x-hidden"
       ref={containerRef}
     >
       <Navbar />
