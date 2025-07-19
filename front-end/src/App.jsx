@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="min-h-screen bg-black flex flex-col">
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
