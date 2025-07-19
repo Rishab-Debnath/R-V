@@ -64,50 +64,49 @@ const Services = () => {
       <section className="text-center py-10 px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
         <p className="text-lg md:text-xl italic text-gray-300 max-w-2xl mx-auto">
-          "We turn your ideas into digital reality. Let's build the future together."
+          "We turn your ideas into digital reality. Let's build the future
+          together."
         </p>
       </section>
 
       {/* Cards Section */}
       <section className="grid gap-8 px-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto pb-20">
         {services.map((service) => (
-          <Link
-            to={service.path}
+          <div
             key={service.title}
             className="bg-white/10 hover:bg-white/20 p-6 rounded-2xl transition duration-300 border border-white/20"
           >
             <h3 className="text-2xl font-semibold mb-2">{service.title}</h3>
             <p className="text-gray-300">{service.description}</p>
-          </Link>
+          </div>
         ))}
       </section>
 
       {/* CTA below cards, touches footer */}
-<section className="text-center px-4 py-15 bg-black/5  border-white/10">
-  <motion.h2
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8 }}
-    className="text-2xl md:text-3xl font-semibold text-white mb-4"
-  >
-    Ready to Start Your Project?
-  </motion.h2>
-  <motion.p
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.2, duration: 0.8 }}
-    className="text-black-300 text-md md:text-lg mb-6"
-  >
-    Reach out today — let’s make your vision a reality.
-  </motion.p>
-  <Link
-    to="/contact"
-    className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition duration-300"
-  >
-    Contact Us
-  </Link>
-</section>
-
+      <section className="text-center px-4 py-15 bg-black/5  border-white/10">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-2xl md:text-3xl font-semibold text-white mb-4"
+        >
+          Ready to Start Your Project?
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="text-black-300 text-md md:text-lg mb-6"
+        >
+          Reach out today — let’s make your vision a reality.
+        </motion.p>
+        <Link
+          to="/contact"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition duration-300"
+        >
+          Contact Us
+        </Link>
+      </section>
 
       <Footer />
     </div>

@@ -8,7 +8,6 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-
 // Import your images
 import web from "../assets/img_01.jpg";
 import app from "../assets/img_02.jpg";
@@ -37,37 +36,35 @@ const Home = () => {
           <Navbar />
 
           {/* Hero Section with Animation */}
-         
-<section
-  className="relative w-full h-screen bg-cover bg-center flex items-center justify-center px-4"
-  style={{ backgroundImage: `url(${bgImage})` }}
->
-  {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/20"></div>
 
-  {/* Content over image */}
-  <div className="relative z-10 text-white text-center max-w-3xl mx-auto">
-    <motion.h1
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="text-4xl md:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_10px_rgba(59,130,246,0.7)]"
-    >
-      Build. Launch. Scale.{" "}
-      <span className="text-blue-400">With R&V.</span>
-    </motion.h1>
+          <section
+            className="relative w-full min-h-[80vh] bg-cover bg-center flex items-center justify-center px-4"
+            style={{ backgroundImage: `url(${bgImage})` }}
+          >
+            <div className="absolute inset-0 bg-black/20"></div>
 
-    <motion.p
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.6, duration: 1 }}
-      className="mt-4 text-lg md:text-xl text-gray-50"
-    >
-      We help startups and businesses transform bold ideas into world-class digital products.
-    </motion.p>
-  </div>
-</section>
+            <div className="relative z-10 text-white text-center max-w-3xl mx-auto px-2">
+              <motion.h1
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight drop-shadow-[0_0_10px_rgba(59,130,246,0.7)]"
+              >
+                Build. Launch. Scale.{" "}
+                <span className="text-blue-400">With R&V.</span>
+              </motion.h1>
 
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6, duration: 1 }}
+                className="mt-4 text-md sm:text-lg md:text-xl text-gray-50 px-2"
+              >
+                We help startups and businesses transform bold ideas into
+                world-class digital products.
+              </motion.p>
+            </div>
+          </section>
 
           {/* Creative Business Section */}
           <section className="text-white mt-20 px-4 max-w-6xl mx-auto">
@@ -102,7 +99,7 @@ const Home = () => {
               {services.map((service, index) => (
                 <SwiperSlide
                   key={index}
-                  className="group relative rounded-2xl h-[300px] overflow-hidden border border-white/20"
+                  className="group relative rounded-2xl h-[260px] sm:h-[280px] md:h-[300px] overflow-hidden border border-white/20"
                 >
                   {/* Image */}
                   <img

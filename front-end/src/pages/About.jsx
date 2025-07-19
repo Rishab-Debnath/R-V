@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router-dom";
 
-
 const sections = [
   {
     id: "mission",
@@ -29,7 +28,7 @@ const sections = [
   {
     id: "founders",
     title: "Who We Are",
-    video: "/videos/video4.mp4",
+    video: "/videos/video10.mp4",
     content: null,
   },
 ];
@@ -205,6 +204,11 @@ export default function About() {
 
       {/* Enhanced Professional CSS with Animations */}
       <style jsx>{`
+        .neon-text {
+          color: #ffffff !important;
+          text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #003ef7ff;
+        }
+
         /* Professional Color Palette */
         :root {
           --primary-white: #ffffff;
@@ -714,7 +718,13 @@ export default function About() {
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </div>
-                    <h1 className="text-6xl md:text-8xl font-bold mb-10 leading-tight text-shimmer-professional animated-text text-shadow-professional">
+                    <h1
+                      className={`text-6xl md:text-8xl font-bold mb-10 leading-tight animated-text ${
+                        sec.id !== "founders"
+                          ? "neon-text"
+                          : "text-shimmer-professional"
+                      }`}
+                    >
                       {sec.title}
                     </h1>
                   </div>
@@ -737,73 +747,135 @@ export default function About() {
                       </span>
                       <div className="w-24 h-0.5 accent-line-professional ml-8 hover-lift animated-line"></div>
                     </div>
-                    <h1 className="text-6xl md:text-8xl font-bold mb-10 leading-tight text-shimmer-professional text-center animated-text text-shadow-professional">
+                    <h1
+                      className={`text-6xl md:text-8xl font-bold mb-10 leading-tight animated-text text-shadow-professional ${
+                        sec.id !== "founders"
+                          ? "neon-text"
+                          : "text-shimmer-professional"
+                      }`}
+                    >
                       {sec.title}
                     </h1>
                   </div>
 
-                  {/* Enhanced Smaller Founders Cards */}
+                  {/* Enhanced Professional Founders Cards with Neon Effects */}
                   <div className="grid md:grid-cols-2 gap-12 md:gap-16 max-w-5xl mx-auto">
-                    {/* Vedant Card - Made Smaller */}
-                    <div className="founder-card-enhanced rounded-2xl p-5 group animated-text delay-1 min-h-[480px] flex flex-col justify-center">
-                      <div className="text-center h-full flex flex-col justify-between">
-                        <div className="relative inline-block mb-6 mx-auto">
-                          <div className="absolute -inset-3 bg-gradient-to-r from-white/10 to-white/5 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-all duration-700"></div>
-                          <img
-                            src="images/vdi.jpg"
-                            className="relative w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover founder-image-professional"
-                            alt="Vedant Ingale"
-                          />
-                        </div>
-                        <div className="space-y-4 flex-1 flex flex-col justify-center">
-                          <div className="w-16 h-0.5 accent-line-professional mx-auto animated-line"></div>
-                          <span className="text-gray-300 text-xs font-light uppercase tracking-[0.25em] block hover-lift">
-                            Co-Founder
-                          </span>
-                          <h2 className="text-3xl md:text-4xl font-bold text-shimmer-professional text-shadow-professional">
-                            Vedant Ingale
-                          </h2>
-                          <h4 className="text-lg text-gray-200 font-medium">
-                            Full Stack Developer
-                          </h4>
-                          <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto hover-lift">
-                            Vedant is a frontend-oriented developer skilled in
-                            React.js with practical experience deploying
-                            scalable platforms that drive user engagement and
-                            business growth.
-                          </p>
+                    {/* Vedant Card - Enhanced Professional */}
+                    <div className="group relative">
+                      {/* Main card */}
+                      <div className="relative bg-transparent backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-white/30 transition-all duration-500 min-h-[480px] flex flex-col justify-center overflow-hidden">
+                        {/* Subtle background pattern */}
+                        <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+
+                        {/* Content */}
+                        <div className="relative z-10 text-center h-full flex flex-col justify-between">
+                          <div className="relative inline-block mb-6 mx-auto">
+                            {/* Image glow effect */}
+                            <div className="absolute -inset-2 bg-white/30 rounded-2xl blur opacity-0 group-hover:opacity-70 transition-all duration-700"></div>
+
+                            {/* Image border effect */}
+                            <div className="relative p-1 bg-white/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500">
+                              <img
+                                src="images/vdi.jpg"
+                                className="relative w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
+                                alt="Vedant Ingale"
+                              />
+                            </div>
+
+                            {/* Fallback image without border for non-hover state */}
+                            <img
+                              src="images/vdi.jpg"
+                              className="absolute inset-0 w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover opacity-100 group-hover:opacity-0 transition-all duration-500"
+                              alt="Vedant Ingale"
+                            />
+                          </div>
+
+                          <div className="space-y-4 flex-1 flex flex-col justify-center">
+                            {/* Animated line */}
+                            <div className="relative w-16 h-0.5 mx-auto overflow-hidden">
+                              <div className="absolute inset-0 bg-white opacity-60"></div>
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 animate-pulse transition-all duration-700"></div>
+                            </div>
+
+                            <span className="text-gray-300 text-xs font-light uppercase tracking-[0.25em] block group-hover:text-white transition-colors duration-300">
+                              Founder & CEO
+                            </span>
+
+                            <h2 className="text-3xl md:text-4xl font-bold text-white group-hover:text-white group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.5)] transition-all duration-500">
+                              Vedant Ingale
+                            </h2>
+
+                            <h4 className="text-lg text-gray-200 font-medium group-hover:text-white transition-colors duration-300">
+                              Full Stack Developer
+                            </h4>
+
+                            <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto group-hover:text-gray-200 transition-colors duration-300">
+                              Vedant is a frontend-oriented developer skilled in
+                              React.js with practical experience deploying
+                              scalable platforms that drive user engagement and
+                              business growth.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
 
-                    {/* Rishab Card - Made Smaller */}
-                    <div className="founder-card-enhanced rounded-2xl p-5 group animated-text delay-2 min-h-[480px] flex flex-col justify-center">
-                      <div className="text-center h-full flex flex-col justify-between">
-                        <div className="relative inline-block mb-6 mx-auto">
-                          <div className="absolute -inset-3 bg-gradient-to-r from-white/5 to-white/10 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-all duration-700"></div>
-                          <img
-                            src="images/psp.jpg"
-                            className="relative w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover founder-image-professional"
-                            alt="Rishab Debnath"
-                          />
-                        </div>
-                        <div className="space-y-4 flex-1 flex flex-col justify-center">
-                          <div className="w-16 h-0.5 accent-line-professional mx-auto animated-line"></div>
-                          <span className="text-gray-300 text-xs font-light uppercase tracking-[0.25em] block hover-lift">
-                            Co-Founder
-                          </span>
-                          <h2 className="text-3xl md:text-4xl font-bold text-shimmer-professional text-shadow-professional">
-                            Rishab Debnath
-                          </h2>
-                          <h4 className="text-lg text-gray-200 font-medium">
-                            Technical Architect
-                          </h4>
-                          <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto hover-lift">
-                            Rishab leads the architecture of ML-driven systems
-                            and has experience with scalable Spring Boot
-                            applications for enterprise and research
-                            environments.
-                          </p>
+                    {/* Rishab Card - Enhanced Professional */}
+                    <div className="group relative">
+                      {/* Main card */}
+                      <div className="relative bg-transparent backdrop-blur-sm rounded-2xl p-6 border border-white/10 group-hover:border-white/30 transition-all duration-500 min-h-[480px] flex flex-col justify-center overflow-hidden">
+                        {/* Subtle background pattern */}
+                        <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+
+                        {/* Content */}
+                        <div className="relative z-10 text-center h-full flex flex-col justify-between">
+                          <div className="relative inline-block mb-6 mx-auto">
+                            {/* Image glow effect */}
+                            <div className="absolute -inset-2 bg-white/30 rounded-2xl blur opacity-0 group-hover:opacity-70 transition-all duration-700"></div>
+
+                            {/* Image border effect */}
+                            <div className="relative p-1 bg-white/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500">
+                              <img
+                                src="images/psp.jpg"
+                                className="relative w-28 h-28 md:w-32 md:h-32 rounded-xl object-cover"
+                                alt="Rishab Debnath"
+                              />
+                            </div>
+
+                            {/* Fallback image without border for non-hover state */}
+                            <img
+                              src="images/psp.jpg"
+                              className="absolute inset-0 w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover opacity-100 group-hover:opacity-0 transition-all duration-500"
+                              alt="Rishab Debnath"
+                            />
+                          </div>
+
+                          <div className="space-y-4 flex-1 flex flex-col justify-center">
+                            {/* Animated line */}
+                            <div className="relative w-16 h-0.5 mx-auto overflow-hidden">
+                              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-cyan-400 opacity-60"></div>
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-100 animate-pulse transition-all duration-700"></div>
+                            </div>
+
+                            <span className="text-gray-300 text-xs font-light uppercase tracking-[0.25em] block group-hover:text-purple-300 transition-colors duration-300">
+                              Co-Founder
+                            </span>
+
+                            <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-white via-purple-100 to-white bg-clip-text text-transparent group-hover:from-purple-300 group-hover:via-white group-hover:to-purple-300 transition-all duration-500">
+                              Rishab Debnath
+                            </h2>
+
+                            <h4 className="text-lg text-gray-200 font-medium group-hover:text-purple-200 transition-colors duration-300">
+                              Technical Architect
+                            </h4>
+
+                            <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto group-hover:text-gray-200 transition-colors duration-300">
+                              Rishab is a full-stack developer focused on
+                              building clean, scalable digital solutions. He
+                              blends smart design with technology to create
+                              simple, effective user experiences.
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -814,7 +886,7 @@ export default function About() {
           </section>
         ))}
         {/* Enhanced Professional Project Showcase Section */}
-        <section className="w-full py-20 px-8 bg-gradient-to-br from-gray-950 via-black to-gray-950 text-white relative overflow-hidden project-section-fade">
+        <section className="w-full py-20 px-8 bg-gradient-to-br from-black-950 via-black to-gray-950 text-white relative overflow-hidden project-section-fade">
           {/* Animated Background Elements */}
           <div className="absolute inset-0 opacity-30">
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>

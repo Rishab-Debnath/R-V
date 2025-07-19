@@ -33,9 +33,9 @@ function Navbar() {
         hideNavbar ? "-translate-y-full" : "translate-y-0"
       }`}
     >
-      <div className="max-w-[1600px] w-full h-full mx-auto flex items-center justify-between px-6 relative">
+      <div className="max-w-[1600px] w-full h-full mx-auto flex items-center justify-between px-4 sm:px-6 relative">
         {/* Logo - Left */}
-        <Link to="/" className="flex items-center z-50 group">
+        <Link to="/Home" className="flex items-center z-50 group">
           <div className="relative">
             <img
               src="/images/RV_Logo.png"
@@ -47,24 +47,27 @@ function Navbar() {
 
         {/* Menu - Center */}
         <ul
-          className={`navbar-menu hidden md:flex gap-8 lg:gap-12 xl:gap-16 text-white text-base font-medium absolute left-1/2 transform -translate-x-1/2 transition-all duration-500`}
+          className={`navbar-menu hidden md:flex gap-6 sm:gap-8 lg:gap-12 xl:gap-16 text-white text-base font-medium absolute left-1/2 transform -translate-x-1/2 transition-all duration-500`}
         >
           <li>
-            <Link to="/Home"
+            <Link
+              to="/Home"
               className="relative group px-6 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
             >
               <span className="relative z-10">Home</span>
             </Link>
           </li>
           <li>
-            <Link to="/About"
+            <Link
+              to="/About"
               className="relative group px-6 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
             >
               <span className="relative z-10">Who we are</span>
             </Link>
           </li>
           <li>
-            <Link to="/services"
+            <Link
+              to="/services"
               className="relative group px-6 py-3 rounded-full transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
             >
               <span className="relative z-10">Services</span>
@@ -123,7 +126,18 @@ function Navbar() {
             </li>
             <li>
               <Link
+                to="/home"
+                onClick={() => setMenuOpen(false)}
+                className="flex items-center gap-3 group px-4 py-3 rounded-xl transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
+              >
+                <div className="w-2 h-2 rounded-full bg-white group-hover:bg-gray-300 transition-colors duration-300"></div>
+                <span>Home</span>
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/about"
+                onClick={() => setMenuOpen(false)}
                 className="flex items-center gap-3 group px-4 py-3 rounded-xl transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
               >
                 <div className="w-2 h-2 rounded-full bg-white group-hover:bg-gray-300 transition-colors duration-300"></div>
@@ -131,28 +145,20 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                to="/services"
+                onClick={() => setMenuOpen(false)}
                 className="flex items-center gap-3 group px-4 py-3 rounded-xl transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
               >
                 <div className="w-2 h-2 rounded-full bg-white group-hover:bg-gray-300 transition-colors duration-300"></div>
                 <span>Services</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="flex items-center gap-3 group px-4 py-3 rounded-xl transition-all duration-300 hover:bg-white/10 hover:text-white border border-transparent hover:border-white/20"
-              >
-                <div className="w-2 h-2 rounded-full bg-white group-hover:bg-gray-300 transition-colors duration-300"></div>
-                <span>Projects</span>
-              </a>
+              </Link>
             </li>
             <li>
               <Link
                 to="/contact"
+                onClick={() => setMenuOpen(false)}
                 className="flex items-center gap-3 group px-4 py-3 text-white transition-all duration-300 hover:text-gray-300 font-medium"
-                onClick={() => setMenuOpen(false)} // closes menu on click
               >
                 <div className="w-2 h-2 rounded-full bg-white group-hover:bg-gray-300 transition-colors duration-300"></div>
                 <span>Contact</span>
@@ -194,7 +200,7 @@ function Navbar() {
         }
 
         .navbar-toggle.active .bar {
-          background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+          background: linear-gradient(135deg, #ffffffff 0%, #0400ffff 100%);
         }
 
         /* Logo Animations */
