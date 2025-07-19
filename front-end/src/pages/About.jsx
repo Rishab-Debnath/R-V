@@ -6,28 +6,24 @@ import { useLocation } from "react-router-dom";
 const sections = [
   {
     id: "mission",
-    title: "Our Mission",
     video: "/videos/video1.mp4",
     content:
       "To be the technological partner of choice, solving real-world problems with elegant, scalable solutions that transform businesses and empower innovation.",
   },
   {
     id: "what",
-    title: "What We Do",
     video: "/videos/video2.mp4",
     content:
       "We enable smart transformation by delivering intelligent systems—ranging from ML-powered automation to full-stack digital platforms that drive measurable results.",
   },
   {
     id: "value",
-    title: "Our Value",
     video: "/videos/video3.mp4",
     content:
       "Our projects bring together performance, ethics, and impact. We believe in writing clean code, building resilient systems, and creating solutions that stand the test of time.",
   },
   {
     id: "founders",
-    title: "Who We Are",
     video: "/videos/video10.mp4",
     content: null,
   },
@@ -730,7 +726,7 @@ export default function About() {
                   </div>
 
                   <div className="max-w-4xl content-slide-in">
-                    <p className="text-xl md:text-2xl text-gray-200 leading-relaxed mb-10 font-light animated-text delay-2">
+                    <p className="text-xl md:text-2xl neon-text leading-relaxed mb-10 font-light animated-text delay-2">
                       {sec.content}
                     </p>
                     <div className="w-48 h-0.5 accent-line-professional animated-text delay-3 animated-line"></div>
