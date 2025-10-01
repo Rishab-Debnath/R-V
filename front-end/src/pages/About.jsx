@@ -33,32 +33,22 @@ const sections = [
 const projects = [
   {
     id: 1,
-    title: "AI-Powered Analytics Platform",
-    description: "Machine learning driven insights for enterprise data",
     image: "/images/Img1.png",
   },
   {
     id: 2,
-    title: "E-Commerce Transformation",
-    description: "Full-stack digital platform with modern UX",
     image: "/images/Img2.png",
   },
   {
     id: 3,
-    title: "Healthcare Management System",
-    description: "Scalable solution for medical workflow optimization",
     image: "/images/Img3.png",
   },
   {
     id: 4,
-    title: "Financial Dashboard",
-    description: "Real-time trading and portfolio management",
     image: "/images/Img4.png",
   },
   {
     id: 5,
-    title: "Smart City Initiative",
-    description: "IoT integration for urban infrastructure",
     image: "/images/Img5.png",
   },
 ];
@@ -201,8 +191,18 @@ export default function About() {
       {/* Enhanced Professional CSS with Animations */}
       <style jsx>{`
         .neon-text {
-          color: #ffffffff !important;
-          text-shadow: 0 0 2px #ffffffff, 0 0 4px #ffffffff, 0 0 6px #ffffffff;
+          color: #fff !important;
+          font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif;
+          font-weight: 700;
+          text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        .neon-paragraph {
+          color: #d1d5db;
+          font-family: 'Poppins', 'Segoe UI', 'Arial', sans-serif;
+          font-size: 1.25rem;
+          font-weight: 400;
+          letter-spacing: 0.01em;
         }
 
         /* Professional Color Palette */
@@ -727,7 +727,7 @@ export default function About() {
 
                   <div className="max-w-4xl content-slide-in">
                     <p className="text-xl md:text-2xl neon-text leading-relaxed mb-10 font-light animated-text delay-2">
-                      {sec.content}
+                      <span className="neon-paragraph">{sec.content}</span>
                     </p>
                     <div className="w-48 h-0.5 accent-line-professional animated-text delay-3 animated-line"></div>
                   </div>
@@ -784,7 +784,13 @@ export default function About() {
                             </span>
 
                             <h2 className="text-3xl md:text-4xl font-bold text-white transition-all duration-500" style={{textShadow: '0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6), 0 0 30px rgba(255,255,255,0.4)'}}>
-                              Vedant Ingale
+                              <span style={{
+                                textShadow: '0 0 12px #fff, 0 0 24px #00eaff, 0 0 36px #00eaff',
+                                color: '#fff',
+                                fontFamily: 'Poppins, Segoe UI, Arial, sans-serif',
+                                letterSpacing: '0.04em',
+                                textShadow: '0 0 10px rgba(255,255,255,0.3)',
+                              }}>Vedant Ingale</span>
                             </h2>
 
                             <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto">
@@ -826,7 +832,13 @@ export default function About() {
                             </span>
 
                             <h2 className="text-3xl md:text-4xl font-bold text-white transition-all duration-500" style={{textShadow: '0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.6), 0 0 30px rgba(255,255,255,0.4)'}}>
-                              Rishab Debnath
+                              <span style={{
+                                textShadow: '0 0 12px #fff, 0 0 24px #00eaff, 0 0 36px #00eaff',
+                                color: '#fff',
+                                fontFamily: 'Poppins, Segoe UI, Arial, sans-serif',
+                                letterSpacing: '0.04em',
+                                textShadow: '0 0 10px rgba(255,255,255,0.3)',
+                              }}>Rishab Debnath</span>
                             </h2>
 
                             <p className="text-gray-300 text-base leading-relaxed max-w-xs mx-auto">
